@@ -9,8 +9,7 @@ namespace TDDLearn
     {
         public static string[] Parse(string inputText)
         {
-            inputText = " " + inputText;
-            return inputText.Split(" -").Where(o=>!string.IsNullOrEmpty(o)).ToArray();
+            return (" " + inputText).Split(" -").Where(o=>!string.IsNullOrEmpty(o)).ToArray();
         }
     }
 }

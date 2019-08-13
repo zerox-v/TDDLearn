@@ -37,6 +37,10 @@ namespace TDDLearn
                     return string.IsNullOrEmpty(value) ? 0 : Convert.ToInt32(value);
                 case "string":
                     return value;
+                case "string-arr":
+                    return string.IsNullOrEmpty(value) ?null : value.Split(','); 
+                case "int-arr":
+                    return string.IsNullOrEmpty(value) ? null : value.Split(',').Select(o=>Convert.ToInt32(o)).ToArray();
                 default:
                     throw new Exception($"暂不支持“{type}”类型的参数");
 

@@ -15,7 +15,7 @@ namespace XUnitTestProject
         [InlineData(51, "FizzBuzz")]
         public void Test1(int i, string str)
         {
-            var fuzzBuzz = new FizzBuzz.FizzBuzz();
+            var fuzzBuzz = new TDDLearn.FizzBuzz();
             var result = fuzzBuzz.Print(i);
             Assert.Equal(result,str);
         }

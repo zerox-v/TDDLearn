@@ -14,7 +14,7 @@ namespace XUnitTestProject
         {
             //TODO 把命令行字符串拆分成数组
             const string argsAsText = "-l -p 8080 -d /usr/logs";
-            var argsArr = TDDLearn.CLIInputParse.Parse(argsAsText);
+            var argsArr = CLIInputParse.Parse(argsAsText);
 
             //TODO 把字符串形式的Schema解析成对象
             var schemaAsText = "l:bool p:int d:string";
@@ -27,6 +27,10 @@ namespace XUnitTestProject
             Assert.Equal(8080,args.GetValue("p"));
             Assert.Equal("/usr/logs", args.GetValue("d"));
         }
+
+
+
+
 
 
         [Fact]
